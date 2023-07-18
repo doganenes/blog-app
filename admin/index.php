@@ -14,7 +14,7 @@ if ($_POST) {
 <script>window.location.href = 'homepage.php'</script>";
     } else {
         echo "<script>alert('User not found!');
-    window.location.href = 'index.php'</script>";
+    window.location.href = 'login.php'</script>";
     }
 }
 ?>

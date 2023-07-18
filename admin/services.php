@@ -26,41 +26,30 @@ $row = $query->fetch_object();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/e@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="shortcut icon" href="../assets/img/admin.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/admin.css">
     <title>Admin Panel - Services</title>
 </head>
 <body>
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Container wrapper -->
     <div class="container-fluid">
-        <!-- Toggle button -->
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-mdb-toggle="collapse"
-            data-mdb-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <i class="fas fa-bars"></i>
+        <a class="navbar-brand" href="homepage.php">
+            <img
+                src="../assets/img/logo.ico"
+                height="50"
+                alt="MDB Logo"
+                loading="lazy"
+            />
+            <span>EDG Blog</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Collapsible wrapper -->
-        <div class="d-flex align-items-center">
-            <!-- Navbar brand -->
-            <a class="navbar-brand mt-2 mt-lg-0" href="homepage.php">
-                <img
-                    src="../assets/img/logo.ico"
-                    height="50"
-                    alt="MDB Logo"
-                    loading="lazy"
-                />
-                <span>EDG Blog</span>
-            </a>
-
-        </div>
-        <div class="d-flex flex-row align-items-center">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="homepage.php">Homepage</a>
@@ -80,14 +69,12 @@ $row = $query->fetch_object();
                 <li class="nav-item">
                     <a class="nav-link" href="exit.php"
                        onclick="if (!confirm('Are you sure do you want to log out from admin panel?')) return false;">Log
-                        out</a>
+                        out <span><i class="fas fa-circle-arrow-right"></i></span></a>
                 </li>
             </ul>
         </div>
-
     </div>
 </nav>
-<!-- Navbar -->
 <form action="" method="post">
     <b>Content:</b>
     <br><br>
