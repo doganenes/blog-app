@@ -44,7 +44,7 @@ $row = $query->fetch_object();
                 alt="MDB Logo"
                 loading="lazy"
             />
-            <span>EDG Blog</span>
+            <span>EDG Blog/Admin</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,15 +76,17 @@ $row = $query->fetch_object();
         </div>
     </div>
 </nav>
-<form action="" method="post">
-    <b>Content:</b>
-    <br><br>
+<form class="admin-form" action="" method="post">
+    <h2>Content:</h2>
     <textarea id="summernote" style="width: 50%;height: 200px;" name="description">
         <?php
-        echo $row->description;
+        if (!empty($row->description)) {
+            echo $row->description;
+        }
         ?>
-    </textarea><br><br>
-    <input type="submit" value="Submit">
+    </textarea>
+    <br>
+    <input class="btn btn-success" type="submit" value="Submit">
 </form>
 <script src="../assets/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>

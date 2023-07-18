@@ -32,7 +32,7 @@ if ($_SESSION["enter"] != sha1(md5("var")) || $_COOKIE["user"] != "msb") {
                 alt="MDB Logo"
                 loading="lazy"
             />
-            <span>EDG Blog</span>
+            <span>EDG Blog/Admin</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,5 +64,12 @@ if ($_SESSION["enter"] != sha1(md5("var")) || $_COOKIE["user"] != "msb") {
         </div>
     </div>
 </nav>
+<div id="clock" class="clock" onload="showTime()"></div>
+<h3 style="text-align: center">Select the action you want to do from the navbar menu</h3>
+<br><br>
+<div class="admin-imageBox">
+    <img src="../assets/img/admin.png" alt="" class="img-thumbnail w-50 img-fluid">
+</div>
+<script src="../assets/js/admin.js"></script>
 </body>
 </html>

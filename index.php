@@ -11,7 +11,7 @@ include("admin/db_connection.php");
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/jquery.fancybox-1.3.4.css">
     <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo rand(10000, 99999) ?>">
     <title>Blog App with Admin Panel</title>
 </head>
 <body>
@@ -31,7 +31,7 @@ include("admin/db_connection.php");
 </aside>
 <main id="content">
     <section id="homepage">
-        <h1>EDG Blog</h1>
+        <h1>Welcome to EDG Blog Website!</h1>
         <h2>Portfolio</h2>
         <hr>
         <div class="clear"></div>
@@ -48,6 +48,7 @@ include("admin/db_connection.php");
     <section id="about_us">
         <h2>about_us.</h2>
         <hr>
+        <br>
         <div class="clear"></div>
         <?php
         $query = $connect->query("SELECT * FROM about_us");
@@ -59,6 +60,7 @@ include("admin/db_connection.php");
     <section id="services">
         <h2>services.</h2>
         <hr>
+        <br>
         <?php
         $query = $connect->query("SELECT * FROM services");
         $row = $query->fetch_object();
@@ -69,6 +71,7 @@ include("admin/db_connection.php");
     <section id="projects">
         <h2>projects.</h2>
         <hr>
+        <br>
         <div class="clear"></div>
         <?php
         $query = $connect->query("select * from projects");
@@ -80,6 +83,7 @@ include("admin/db_connection.php");
     <section id="contact">
         <h2>Contact.</h2>
         <hr>
+        <br>
         <div class="clear"></div>
         <form method="post" opention="">
             <label for="name">Name</label>

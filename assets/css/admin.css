@@ -1,0 +1,29 @@
+@import "font.css";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open-sans';
+}
+
+.clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #454750;
+    font-size: 60px;
+    letter-spacing: 7px;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.admin-imageBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

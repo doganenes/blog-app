@@ -45,7 +45,7 @@ if ($process == "add") {
                 alt="MDB Logo"
                 loading="lazy"
             />
-            <span>EDG Blog</span>
+            <span>EDG Blog/Admin</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -98,10 +98,14 @@ if ($process == "add") {
 </table>
 <br><br>
 
-<form action="portfolio.php?process=add" enctype="multipart/form-data" method="post">
-    <b>Title:</b><input type="text" size="20" name="title">
-    <b>Image:</b><input type="file" name="image">
-    <input type="submit" value="Save">
+<form class="admin-form" action="portfolio.php?process=add" enctype="multipart/form-data" method="post">
+    <b>Title:</b>
+    <input type="text" size="20" name="title">
+    <br>
+    <b>Image:</b>
+    <input style="margin-left: 200px" type="file" name="image">
+    <br>
+    <div><input class="btn btn-warning" type="submit" value="Save"></div>
 </form>
 <script src="../assets/js/bootstrap.min.js"></script>
 </body>
