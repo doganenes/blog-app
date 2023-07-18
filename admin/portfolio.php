@@ -28,11 +28,11 @@ if ($process == "add") {
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="shortcut icon" href="../assets/img/admin.ico" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
           integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="shortcut icon" href="../assets/img/admin.ico" type="image/x-icon">
     <title>Admin Panel - Portfolio</title>
 </head>
 <body style="text-align:center;">
@@ -42,7 +42,7 @@ if ($process == "add") {
             <img
                 src="../assets/img/logo.ico"
                 height="50"
-                alt="MDB Logo"
+                alt="EDG Logo"
                 loading="lazy"
             />
             <span>EDG Blog/Admin</span>
@@ -103,9 +103,9 @@ if ($process == "add") {
     <input type="text" size="20" name="title">
     <br>
     <b>Image:</b>
-    <input style="margin-left: 200px" type="file" name="image">
+    <input style="margin-left: 190px; margin-top: 10px" type="file" name="image">
     <br>
-    <div><input class="btn btn-warning" type="submit" value="Save"></div>
+    <div><input class="btn btn-success" type="submit" value="Save"></div>
 </form>
 <script src="../assets/js/bootstrap.min.js"></script>
 </body>

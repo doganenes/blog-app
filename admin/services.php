@@ -40,7 +40,7 @@ $row = $query->fetch_object();
             <img
                 src="../assets/img/logo.ico"
                 height="50"
-                alt="MDB Logo"
+                alt="EDG Logo"
                 loading="lazy"
             />
             <span>EDG Blog/Admin</span>
@@ -84,7 +84,7 @@ $row = $query->fetch_object();
         }
         ?>
     </textarea><br>
-    <input class="btn btn-success" type="submit" value="Submit">
+    <input class="btn btn-success" type="submit" value="Save">
 </form>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

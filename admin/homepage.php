@@ -20,6 +20,7 @@ if ($_SESSION["enter"] != sha1(md5("var")) || $_COOKIE["user"] != "msb") {
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
     />
+    <link rel="shortcut icon" href="../assets/img/admin.ico" type="image/x-icon">
     <title>Admin Panel - Homepage</title>
 </head>
 <body>
@@ -29,7 +30,7 @@ if ($_SESSION["enter"] != sha1(md5("var")) || $_COOKIE["user"] != "msb") {
             <img
                 src="../assets/img/logo.ico"
                 height="50"
-                alt="MDB Logo"
+                alt="EDG Logo"
                 loading="lazy"
             />
             <span>EDG Blog/Admin</span>

@@ -9,9 +9,8 @@ include("admin/db_connection.php");
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/jquery.fancybox-1.3.4.css">
     <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo rand(10000, 99999) ?>">
+    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo rand(1000, 9999) ?>">
     <title>Blog App with Admin Panel</title>
 </head>
 <body>
@@ -46,7 +45,7 @@ include("admin/db_connection.php");
     </section>
 
     <section id="about_us">
-        <h2>about_us.</h2>
+        <h2>about us</h2>
         <hr>
         <br>
         <div class="clear"></div>
@@ -58,7 +57,7 @@ include("admin/db_connection.php");
     </section>
 
     <section id="services">
-        <h2>services.</h2>
+        <h2>services</h2>
         <hr>
         <br>
         <?php
@@ -69,19 +68,19 @@ include("admin/db_connection.php");
     </section>
 
     <section id="projects">
-        <h2>projects.</h2>
+        <h2>projects</h2>
         <hr>
         <br>
         <div class="clear"></div>
         <?php
-        $query = $connect->query("select * from projects");
+        $query = $connect->query("SELECT * FROM projects");
         $row = $query->fetch_object();
         echo $row->description;
         ?>
     </section>
 
     <section id="contact">
-        <h2>Contact.</h2>
+        <h2>contact</h2>
         <hr>
         <br>
         <div class="clear"></div>
@@ -89,10 +88,10 @@ include("admin/db_connection.php");
             <label for="name">Name</label>
             <input type="text" name="name" id="name" required>
 
-            <label for="tel">tel</label>
+            <label for="tel">Tel</label>
             <input type="tel" name="tel" id="tel">
 
-            <label for="email">E-posta</label>
+            <label for="email">E-mail</label>
             <input type="email" name="email" id="email">
 
             <label for="message">Message</label>
@@ -102,18 +101,13 @@ include("admin/db_connection.php");
         </form>
     </section>
 
-    <footer
-    ">
-    <p>Designed by <a href="https://www.github.com/doganenes" target="_blank">Enes Doğan</a></p>
+    <footer>
+        <p>Designed by <a style="margin-left: 5px;color: rebeccapurple;text-decoration: none" href="https://www.github.com/doganenes" target="_blank">Enes Doğan</a></p>
     </footer>
 </main>
 
 <script src="js/jquery-1.4.3.min.js"></script>
-<script src="js/jquery.fancybox-1.3.4.js"></script>
-
 <script>
-    $("a.images").fancybox();
-
     function open() {
         document.getElementById("menu").style.display = "block";
         document.getElementById("content").style.paddingLeft = "350px";

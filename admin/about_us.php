@@ -40,7 +40,7 @@ $row = $query->fetch_object();
             <img
                 src="../assets/img/logo.ico"
                 height="50"
-                alt="MDB Logo"
+                alt="EDG Logo"
                 loading="lazy"
             />
             <span>EDG Blog/Admin</span>
@@ -77,7 +77,7 @@ $row = $query->fetch_object();
 </nav>
 <form class="admin-form" action="" method="post">
     <h2>Content:</h2>
-    <textarea id="summernote" style="width: 50%;height: 200px;" name="description">
+    <textarea style="width: 50%;height: 200px;" name="description">
         <?php
         if (!empty($row->description)) {
             echo $row->description;
@@ -85,7 +85,7 @@ $row = $query->fetch_object();
         ?>
     </textarea>
     <br>
-    <input class="btn btn-success" type="submit" value="Submit">
+    <input class="btn btn-success" type="submit" value="Save">
 </form>
 <script src="../assets/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
