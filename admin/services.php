@@ -79,7 +79,7 @@ $row = $query->fetch_object();
 </nav>
 <form class="admin-form" action="" method="post">
     <b>Content:</b>
-    <textarea id="summernote" style="width:50%;height: 200px;" name="description">
+    <textarea style="width:50%;height: 200px;" name="description">
         <?php
         if (!empty($row->description)) {
             echo $row->description;
@@ -89,11 +89,5 @@ $row = $query->fetch_object();
     <input class="btn btn-success" type="submit" value="Save">
 </form>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script>
-    $(document).ready(function () {
-        $('#summernote').summernote();
-    });
-</script>
 </body>
 </html>

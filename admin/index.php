@@ -47,7 +47,7 @@ if ($_POST) {
                             <input type="password" name="password" class="form-control form-control-lg"/>
                             <label class="form-label">Password</label>
                         </div>
-                        <input class="btn btn-primary btn-lg btn-block" type="submit" value="Login"/>
+                        <input class="btn btn-secondary btn-lg btn-block" type="submit" value="Login"/>
                         </form>
                         <hr class="my-4">
 
