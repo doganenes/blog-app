@@ -1,9 +1,10 @@
 @import "font.css";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'open-sans';
+    font-family: 'open-sans-regular';
 }
 
 .clock {

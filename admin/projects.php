@@ -11,6 +11,8 @@ if ($_POST) {
     $query = $connect->query("insert into projects (description) values ('$description')");
     if ($query) {
         echo "<script>window.location.href = 'projects.php';</script>";
+    } else {
+        echo "<script>alert('Error - Register is failed!'); window.location.href = 'projects.php';</script>";
     }
 }
 
