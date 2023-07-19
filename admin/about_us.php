@@ -54,13 +54,13 @@ $row = $query->fetch_object();
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="homepage.php">Homepage</a>
+                    <a class="nav-link active" href="homepage.php">Homepage</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="portfolio.php">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="about_us.php">About Us</a>
+                    <a class="nav-link" href="about_us.php">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="services.php">Services</a>
