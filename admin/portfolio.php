@@ -6,22 +6,23 @@ if ($_SESSION["enter"] != sha1(md5("var")) || $_COOKIE["user"] != "msb") {
     header("Location: exit.php");
 }
 
-$process = $_GET["process"];
 
-if ($process == "remove") {
-    $id = $_GET["id"];
-    $query = $connect->query("delete from portfolio where (id='$id')");
-    echo "<script> window.location.href='portfolio.php'; </script>";
+if (isset($_GET["process"])) {
+    $process = $_GET["process"];
+    if ($process == "remove") {
+        $id = $_GET["id"];
+        $query = $connect->query("delete from portfolio where (id='$id')");
+        echo "<script> window.location.href='portfolio.php'; </script>";
+    }
+
+    if ($process == "add") {
+        $title = $_POST["title"];
+        $image = "../assets/img/" . $_FILES["image"]["name"];
+        move_uploaded_file($_FILES["image"]["tmp_name"], "../" . $image);
+        $query = $connect->query("insert into portfolio (title,image) values ('$title','$image')");
+        echo "<script> window.location.href='portfolio.php'; </script>";
+    }
 }
-
-if ($process == "add") {
-    $title = $_POST["title"];
-    $image = "../assets/img/" . $_FILES["image"]["name"];
-    move_uploaded_file($_FILES["image"]["tmp_name"], "../" . $image);
-    $query = $connect->query("insert into portfolio (title,image) values ('$title','$image')");
-    echo "<script> window.location.href='portfolio.php'; </script>";
-}
-
 ?>
 <!doctype html>
 <html>
@@ -57,7 +58,7 @@ if ($process == "add") {
                     <a class="nav-link" href="homepage.php">Homepage</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="portfolio.php">Portfolio</a>
+                    <a class="nav-link active" href="portfolio.php">Portfolio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about_us.php">About Us</a>
@@ -103,7 +104,7 @@ if ($process == "add") {
     <input type="text" size="20" name="title">
     <br>
     <b>Image:</b>
-    <input style="margin-left: 190px; margin-top: 10px" type="file" name="image">
+    <input style="margin-left: 210px; margin-top: 10px" type="file" name="image">
     <br>
     <div><input class="btn btn-success" type="submit" value="Save"></div>
 </form>

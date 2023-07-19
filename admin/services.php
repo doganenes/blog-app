@@ -25,15 +25,15 @@ $row = $query->fetch_object();
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/e@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=processe">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
           integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="shortcut icon" href="../assets/img/admin.ico" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/admin.css">
-    <title>Admin Panel - Services</title>
+    <link rel="shortcut icon" href="../assets/img/admin.ico" type="image/x-icon">
+    <title>Admin Panel - About Us</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -63,7 +63,7 @@ $row = $query->fetch_object();
                     <a class="nav-link" href="about_us.php">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="services.php">Services</a>
+                    <a class="nav-link active" href="services.php">Services</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="projects.php">Projects</a>
@@ -78,16 +78,18 @@ $row = $query->fetch_object();
     </div>
 </nav>
 <form class="admin-form" action="" method="post">
-    <b>Content:</b>
-    <textarea style="width:50%;height: 200px;" name="description">
+    <h2>Content:</h2>
+    <textarea style="width: 50%;height: 200px;" name="description">
         <?php
         if (!empty($row->description)) {
             echo $row->description;
         }
         ?>
-    </textarea><br>
+    </textarea>
+    <br>
     <input class="btn btn-success" type="submit" value="Save">
 </form>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 </body>
 </html>

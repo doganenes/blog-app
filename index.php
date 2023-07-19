@@ -87,16 +87,16 @@ include("admin/db_connection.php");
         <div class="clear"></div>
         <form method="post" opention="">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" required>
+            <input type="text" name="name" placeholder="your name.." id="name" required>
 
             <label for="tel">Tel</label>
-            <input type="tel" name="tel" id="tel">
+            <input type="tel" name="tel" placeholder="your telephone number.." id="tel">
 
             <label for="email">E-mail</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" placeholder="your email.." id="email">
 
             <label for="message">Message</label>
-            <textarea name="message" id="message"></textarea>
+            <textarea name="message" placeholder="your message.." id="message"></textarea>
 
             <button type="submit">Send</button>
         </form>
