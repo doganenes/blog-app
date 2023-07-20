@@ -70,7 +70,7 @@ $row = $query->fetch_object();
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="exit.php"
-                       onclick="if (!confirm('Are you sure do you want to log out from admin panel?')) return false;">Log
+                       onclick="if (!confirm('Are you sure you want to log out?')) return false;">Log
                         out <span><i class="fas fa-circle-arrow-right"></i></span></a>
                 </li>
             </ul>

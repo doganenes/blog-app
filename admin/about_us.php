@@ -62,7 +62,7 @@ $row = $query->fetch_object();
                         <a class="nav-link" href="projects.php">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="exit.php" onclick="if (!confirm('Are you sure do you want to log out from admin panel?')) return false;">Log
+                        <a class="nav-link" href="exit.php" onclick="if (!confirm('Are you sure you want to log out?')) return false;">Log
                             out <span><i class="fas fa-circle-arrow-right"></i></span></a>
                     </li>
                 </ul>
@@ -84,5 +84,4 @@ $row = $query->fetch_object();
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 </body>
-
 </html>

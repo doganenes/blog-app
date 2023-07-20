@@ -85,7 +85,7 @@ include("admin/db_connection.php");
         <hr>
         <br>
         <div class="clear"></div>
-        <form method="post" opention="">
+        <form method="post" action="admin/email.php">
             <label for="name">Name</label>
             <input type="text" name="name" placeholder="your name.." id="name" required>
 
