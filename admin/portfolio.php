@@ -6,23 +6,47 @@ if ($_SESSION["enter"] != sha1(md5("var")) || $_COOKIE["user"] != "msb") {
     header("Location: exit.php");
 }
 
-
 if (isset($_GET["process"])) {
     $process = $_GET["process"];
+
     if ($process == "remove") {
         $id = $_GET["id"];
-        $query = $connect->query("delete from portfolio where (id='$id')");
-        echo "<script> window.location.href='portfolio.php'; </script>";
+
+        $query = $connect->query("SELECT image FROM portfolio WHERE id='$id'");
+        if ($query) {
+            $row = $query->fetch_assoc();
+            $imageFileName = $row["image"];
+            $query = $connect->query("DELETE FROM portfolio WHERE id='$id'");
+
+            $imagePath = __DIR__ . "/../assets/img/" . $imageFileName;
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+
+            echo "<script> window.location.href='portfolio.php'; </script>";
+        } else {
+            echo "An error occurred.";
+        }
     }
+
 
     if ($process == "add") {
         $title = $_POST["title"];
-        $image = "../assets/img/" . $_FILES["image"]["name"];
-        move_uploaded_file($_FILES["image"]["tmp_name"], "../" . $image);
-        $query = $connect->query("insert into portfolio (title,image) values ('$title','$image')");
-        echo "<script> window.location.href='portfolio.php'; </script>";
+
+        $imageExtension = pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION);
+        $FileName = $title . '.' . $imageExtension;
+
+        $imagePath = "../assets/img/" . $FileName;
+
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], $imagePath)) {
+            $query = $connect->query("INSERT INTO portfolio (title, image) VALUES ('$title', '$FileName')");
+            echo "<script>window.location.href='portfolio.php';</script>";
+        } else {
+            echo "An error occurred while image uploading.";
+        }
     }
 }
+
 ?>
 <!doctype html>
 <html>
@@ -78,21 +102,21 @@ if (isset($_GET["process"])) {
         </div>
     </div>
 </nav>
-<table width="100%" border="1">
-    <tr align="center">
-        <th>Order</th>
-        <th>Title</th>
-        <th>Remove</th>
+<table class="table w-100">
+    <tr>
+        <th class='text-center'>Order</th>
+        <th class='text-center'>Title</th>
+        <th class='text-center'>Remove</th>
     </tr>
     <?php
     $order = 0;
     $query = $connect->query("select * from portfolio");
     while ($row = $query->fetch_object()) {
         $order++;
-        echo "<tr align='center'>
-                <td>$order</td>
-                <td>$row->title</td>
-                <td><a href='portfolio.php?process=remove&id=$row->id'>remove</td>
+        echo "<tr>
+                <td class='text-center'>$order</td>
+                <td class='text-center'>$row->title</td>
+                <td class='text-center'><a href='portfolio.php?process=remove&id=$row->id'>remove</td>
                 </tr>";
     }
     ?>
@@ -101,7 +125,7 @@ if (isset($_GET["process"])) {
 
 <form class="admin-form" action="portfolio.php?process=add" enctype="multipart/form-data" method="post">
     <b>Title:</b>
-    <input type="text" size="20" name="title">
+    <input type="text" size="20" name="title" required>
     <br>
     <b>Image:</b>
     <input style="margin-left: 210px; margin-top: 10px" type="file" name="image">

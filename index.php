@@ -38,8 +38,8 @@ include("admin/db_connection.php");
         <?php
         $query = $connect->query("select * from portfolio");
         while ($row = $query->fetch_object()) {
-            $image = substr($row->image, 3);
-            echo "<div class='gallery'><img class='gallery-image' src='$image' alt='$row->title' title='$row->title'></div> ";
+            $image = $row->image;
+            echo "<div class='gallery'><img class='gallery-image' src='assets/img/$image' alt='$row->title' title='$row->title'></div> ";
         }
         ?>
         <div class="clear"></div>
