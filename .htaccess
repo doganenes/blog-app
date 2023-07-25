@@ -1,0 +1,2 @@
+RewriteEngine on
+ErrorDocument 404 /blog-app/admin/404.php
