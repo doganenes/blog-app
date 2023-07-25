@@ -103,7 +103,7 @@ include("admin/db_connection.php");
     </section>
 
     <footer>
-        <p>Designed by <a style="margin-left: 5px;color: rebeccapurple;text-decoration: none"
+        <p>Designed by <a style="margin-left: 0.3rem;color: rebeccapurple;text-decoration: none"
                           href="https://www.github.com/doganenes" target="_blank">Enes Doğan</a></p>
     </footer>
 </main>

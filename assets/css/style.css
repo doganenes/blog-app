@@ -35,7 +35,7 @@ aside h1 {
 main {
     width: calc(100% - 20rem);
     float: right;
-    padding: 6rem .5rem 3rem;
+    padding: 6rem .5rem 1rem;
 }
 
 .aside-title {
@@ -294,7 +294,6 @@ footer span {
         min-height: 200px;
         max-height: 200px !important;
     }
-
 
     main {
         width: 100%;

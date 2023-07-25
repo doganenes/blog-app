@@ -1,23 +1,9 @@
 <?php
 session_start();
 include("db_connection.php");
-if ($_SESSION["enter"] != sha1(md5("var")) && $_COOKIE["user"] != "msb") {
-    header("Location:exit.php");
+if ($_SESSION["enter"] != sha1(md5("var")) || $_COOKIE["user"] != "msb") {
+    header("Location: exit.php");
 }
-
-if ($_POST) {
-    $description = $_POST["description"];
-    $query = $connect->query("delete from projects");
-    $query = $connect->query("insert into projects (description) values ('$description')");
-    if ($query) {
-        echo "<script>window.location.href = 'projects.php';</script>";
-    } else {
-        echo "<script>alert('Error - Register is failed!'); window.location.href = 'projects.php';</script>";
-    }
-}
-
-$query = $connect->query("SELECT * FROM projects");
-$row = $query->fetch_object();
 ?>
 <!doctype html>
 <html lang="en">
@@ -77,8 +63,11 @@ $row = $query->fetch_object();
         </div>
     </div>
 </nav>
+<div class="d-flex justify-content-end p-2"><a class="btn btn-warning" href="http://localhost/blog-app/"
+                                               target="_blank">View
+        Website</a></button></div>
 <div id="clock" class="clock" onload="showTime()"></div>
-<h3 style="text-align: center">Select the action you want to do from the navbar menu</h3>
+<h3 style="text-align: center">Choose an action from the navbar menu</h3>
 <br><br>
 <div class="admin-imageBox">
     <img src="../assets/img/admin.png" alt="" class="img-thumbnail w-50 img-fluid">

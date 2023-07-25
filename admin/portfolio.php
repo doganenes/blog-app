@@ -25,10 +25,9 @@ if (isset($_GET["process"])) {
 
             echo "<script> window.location.href='portfolio.php'; </script>";
         } else {
-            echo "An error occurred.";
+            echo "An error occurred while image deleting.";
         }
     }
-
 
     if ($process == "add") {
         $title = $_POST["title"];
@@ -46,7 +45,6 @@ if (isset($_GET["process"])) {
         }
     }
 }
-
 ?>
 <!doctype html>
 <html>
@@ -60,7 +58,7 @@ if (isset($_GET["process"])) {
     <link rel="shortcut icon" href="../assets/img/admin.ico" type="image/x-icon">
     <title>Admin Panel - Portfolio</title>
 </head>
-<body style="text-align:center;">
+<body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="homepage.php">
@@ -102,7 +100,7 @@ if (isset($_GET["process"])) {
         </div>
     </div>
 </nav>
-<table class="table w-100">
+<table class="table">
     <tr>
         <th class='text-center'>Order</th>
         <th class='text-center'>Title</th>
@@ -125,10 +123,12 @@ if (isset($_GET["process"])) {
 
 <form class="admin-form" action="portfolio.php?process=add" enctype="multipart/form-data" method="post">
     <b>Title:</b>
-    <input type="text" size="20" name="title" required>
+    <div class="d-inline">
+        <input class="form-control form-control-sm" type="text" size="20" name="title" required>
+    </div>
     <br>
     <b>Image:</b>
-    <input style="margin-left: 210px; margin-top: 10px" type="file" name="image">
+    <input style="margin-left: 210px; margin-top: 10px" type="file" name="image" required>
     <br>
     <div><input class="btn btn-success" type="submit" value="Save"></div>
 </form>

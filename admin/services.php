@@ -1,8 +1,8 @@
 <?php
 session_start();
 include("db_connection.php");
-if ($_SESSION["enter"] != sha1(md5("var")) && $_COOKIE["user"] != "msb") {
-    header("Location:exit.php");
+if ($_SESSION["enter"] != sha1(md5("var")) || $_COOKIE["user"] != "msb") {
+    header("Location: exit.php");
 }
 
 if ($_POST) {
