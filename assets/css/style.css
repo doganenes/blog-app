@@ -150,8 +150,7 @@ input {
     width: 100%;
     margin-bottom: 1rem;
     font-size: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0.1rem;
 }
 
 textarea {
@@ -160,6 +159,11 @@ textarea {
     height: 6rem;
     margin-bottom: 1.5rem;
     font-size: 1rem;
+    padding: 0.5rem 0.1rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
 }
 
 button {
@@ -167,7 +171,8 @@ button {
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
     font-size: 1.1rem;
-    background-color: green;
+    background-color: #1b9f48;
+    border-radius: 1rem;
     color: #fff;
     border: none;
     cursor: pointer;
