@@ -2,8 +2,7 @@
 
 ![admin-homepage](https://github.com/doganenes/blog-app/assets/86846812/36a155a8-6aaf-448c-aacb-2b768ab183aa)
 ![blog-portfolio](https://github.com/doganenes/blog-app/assets/86846812/5b565880-660a-4826-9ce1-7ec0b40b8453)
-
-![admin-login](https://github.com/doganenes/blog-app/assets/86846812/8fb5854b-5c4a-4a7a-a8f7-5cd6c78fcbc1)
+![admin-blog](https://github.com/doganenes/blog-app/assets/86846812/f44808a9-6428-4d8c-bb10-708a15070b75)
 
 ## Features
 
