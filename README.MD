@@ -10,7 +10,7 @@
 - Changes made in the admin panel are saved in the database.
 - Authentication is included in the login to the admin panel. The user who is not logged into the system cannot access the pages in the admin panel via the link.
 - Assets folder includes required files for website.
-- Used @font-face in css.
+- Used `@font-face` in css.
 
 ---
 
