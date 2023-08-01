@@ -1,6 +1,6 @@
 # Blog App - PHP, MySQL, Bootstrap
 
-![admin-homepage](https://github.com/doganenes/blog-app/assets/86846812/36a155a8-6aaf-448c-aacb-2b768ab183aa)
+![admin-homepage](https://github.com/doganenes/blog-app/assets/86846812/e89923ed-15b5-4b3d-b677-995e262cc351)
 ![blog-portfolio](https://github.com/doganenes/blog-app/assets/86846812/5b565880-660a-4826-9ce1-7ec0b40b8453)
 ![admin-blog](https://github.com/doganenes/blog-app/assets/86846812/f44808a9-6428-4d8c-bb10-708a15070b75)
 
